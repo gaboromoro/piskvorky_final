@@ -243,6 +243,7 @@ int main() {
             winner = result;
             break;
         }
+       
 
         if (u % 2 == 0) {
             xo = X;
@@ -265,12 +266,12 @@ int main() {
     printBoard(pboard, size);
     free(pboard);  // uvolnenie pamäte kvoli malloc
 
-    // Deklarácia výhercu!
-    if (winner == 0) {
+         
+    if (winner == 1) {      //ak chceckWin vratil 1, znamena remiza
         printf("Remiza!");
     }
     else {
-        printf("%c vyhral hru!", winner);
+        printf("%c vyhral hru!", winner);  //vyherca
     }
     printf(" Po stlaceni hocijakeho tlacitka dokoncite.");
     getchar();
