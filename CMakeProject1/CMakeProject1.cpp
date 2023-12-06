@@ -263,7 +263,7 @@ int main() {
 
 
     printBoard(pboard, size);
-    free(pboard);  // Zmeni funkciu aby sa nam uvplnia pamäť
+    free(pboard);  // uvolnenie pamäte kvoli malloc
 
     // Deklarácia výhercu!
     if (winner == 0) {
