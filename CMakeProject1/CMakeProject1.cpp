@@ -222,7 +222,7 @@ int main() {
 
     // Vygenerovanie hracej plochy
     pboard = (char*)malloc(size * size * sizeof(char));  // Zmena typu pboard na char*
-
+                                                        // (size * size * sizeof(char) - pocet bitov potrebnych na hraciu plochu
     for (i = 0; i < size; i++) {
         for (j = 0; j < size; j++) {
             *(pboard + i * size + j) = SPACE;
