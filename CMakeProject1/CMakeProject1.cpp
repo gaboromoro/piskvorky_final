@@ -102,7 +102,6 @@ int turn(char* p, char player, int size) {
         }
     }
 
-    //*(p + y * velkost + x) = hrac;
 
     return 0;
 }
@@ -119,14 +118,14 @@ int checkWin(char* p, int size) {
 
     // Loop cez riadky a stplce
     for (i = 0; i < size; i++) {
-        // Reset
-        hx = ho = vx = vo = 0;
+        
+        hx = ho = vx = vo = 0;  // Reset
         // Loop cez bunky
         for (j = 0; j < size; j++) {
             // Dostaneme hodnoty pre riadky a stplce
             hval = *(p + i * size + j); //bude obsahovat aktualnu hodnotu v riakdu (hval = X alebo O alebo medzera)
             vval = *(p + j * size + i); //bude obsahovat aktualnu hodnotu v stplci (vval = X alebo O alebo medzera)
-            // Skontroluje zhody
+            // Skontroluje zhody policok
             if (hval == X) {
                 hx++;
             }
@@ -151,10 +150,10 @@ int checkWin(char* p, int size) {
             }
             // hore
             if (size - 1 - i == j) {
-                if (hval == X) {// je to X
+                if (hval == X) { // je to X
                     dx2++;
                 }
-                if (hval == O) {// je to O
+                if (hval == O) { // je to O
                     do2++;
                 }
             }
