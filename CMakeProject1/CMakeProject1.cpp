@@ -237,9 +237,10 @@ int main() {
 
     while (1) {
 
-
+        int result = checkWin(pboard, size);
+        
         if (checkWin(pboard, size) != 0) {
-            winner = xo;
+            winner = result;
             break;
         }
 
