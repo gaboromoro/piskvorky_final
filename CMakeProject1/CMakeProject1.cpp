@@ -124,8 +124,8 @@ int checkWin(char* p, int size) {
         // Loop cez bunky
         for (j = 0; j < size; j++) {
             // Dostaneme hodnoty pre riadky a stplce
-            hval = *(p + i * size + j);
-            vval = *(p + j * size + i);
+            hval = *(p + i * size + j); //bude obsahovat aktualnu hodnotu v riakdu (hval = X alebo O alebo medzera)
+            vval = *(p + j * size + i); //bude obsahovat aktualnu hodnotu v stplci (vval = X alebo O alebo medzera)
             // Skontroluje zhody
             if (hval == X) {
                 hx++;
